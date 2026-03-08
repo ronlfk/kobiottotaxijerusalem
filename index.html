@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kobi Otto Taxi Jerusalem</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:radial-gradient(circle at top, rgba(109,40,217,.08), transparent 28%), linear-gradient(180deg,#0b0828 0%,#221d57 100%);
+color:#fff;
+min-height:100vh
+}
+header{
+position:sticky;
+top:0;
+height:64px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+background:#0a0828;
+border-bottom:1px solid rgba(255,255,255,.08)
+}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700}
+.brand-box{
+width:36px;height:36px;border-radius:10px;background:#8b5cf6;
+display:flex;align-items:center;justify-content:center;font-weight:bold
+}
+nav{display:flex;gap:30px}
+nav a{color:#ccc;text-decoration:none;font-weight:bold}
+nav a:hover{color:#fff}
+
+main{padding:80px 20px;text-align:center}
+.hero{font-size:64px;font-weight:800}
+.hero span{background:linear-gradient(90deg,#8b5cf6,#c4b5fd);
+-webkit-background-clip:text;color:transparent}
+.sub{margin-top:20px;font-size:22px;color:#aaa}
+
+.cards{
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+max-width:800px;
+margin-left:auto;margin-right:auto
+}
+
+.card{
+background:#181245;
+padding:30px;
+border-radius:20px;
+text-align:left;
+border:1px solid rgba(255,255,255,.05);
+cursor:pointer;
+transition:0.2s
+}
+.card:hover{transform:translateY(-4px)}
+.card h2{margin-top:20px}
+.card p{color:#aaa}
+
+.section{
+max-width:900px;
+margin:40px auto;
+text-align:left;
+background:#1c164b;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.05)
+}
+.section h3{margin-top:0}
+
+.footer{
+text-align:center;
+padding:30px;
+border-top:1px solid rgba(255,255,255,.08);
+color:#777
+}
+.hidden{display:none}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+<div class="brand-box">S</div>
+<span>Kobi Otto Taxi Jerusalem</span>
+</div>
+
+<nav>
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('terms')">Terms & Conditions</a>
+<a href="#" onclick="showPage('privacy')">Privacy Policy</a>
+</nav>
+</header>
+
+
+<!-- HOME -->
+<div id="home">
+<main>
+<div class="hero">Kobi Otto <span>Taxi Jerusalem</span></div>
+<p class="sub">Access our official legal documents and policies below.</p>
+
+<div class="cards">
+<div class="card" onclick="showPage('terms')">
+<h2>📄 Terms & Conditions</h2>
+<p>Read our terms of service and usage agreements.</p>
+</div>
+
+<div class="card" onclick="showPage('privacy')">
+<h2>🛡️ Privacy Policy</h2>
+<p>Learn how we protect and respect your privacy.</p>
+</div>
+</div>
+</main>
+</div>
+
+
+<!-- TERMS -->
+<div id="terms" class="hidden">
+<main>
+<h1>Terms And Conditions</h1>
+
+<div class="section">
+<h3>Acceptance Of Terms</h3>
+<p>By accessing and using the Services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Agreement.</p>
+</div>
+
+<div class="section">
+<h3>User Accounts</h3>
+<p>If you create an account with us, you are responsible for maintaining the security of your account.</p>
+</div>
+
+<div class="section">
+<h3>Intellectual Property</h3>
+<p>All intellectual property rights in the Services are owned by the Company.</p>
+</div>
+
+<div class="section">
+<h3>Limitation Of Liability</h3>
+<p>The Company will not be liable for indirect or incidental damages.</p>
+</div>
+
+<div class="section">
+<h3>Contact</h3>
+<p>Email: dogyamor044@gmail.com</p>
+</div>
+
+</main>
+</div>
+
+
+<!-- PRIVACY -->
+<div id="privacy" class="hidden">
+<main>
+<h1>Privacy Policy</h1>
+
+<div class="section">
+<h3>Data Collection</h3>
+<p>We do not collect any personal data from our users.</p>
+</div>
+
+<div class="section">
+<h3>Third Party Services</h3>
+<p>Our service may contain links to third‑party websites.</p>
+</div>
+
+<div class="section">
+<h3>Children's Privacy</h3>
+<p>Our service does not address anyone under the age of 13.</p>
+</div>
+
+<div class="section">
+<h3>Contact</h3>
+<p>Email: dogyamor044@gmail.com</p>
+</div>
+
+</main>
+</div>
+
+
+<div class="footer">
+© 2026 Stark Dev. All rights reserved.<br>
+dogyamor044@gmail.com
+</div>
+
+<script>
+function showPage(page){
+
+const pages=['home','terms','privacy'];
+
+pages.forEach(p=>{
+ document.getElementById(p).classList.add('hidden');
+});
+
+ document.getElementById(page).classList.remove('hidden');
+
+window.scrollTo(0,0);
+}
+</script>
+
+</body>
+</html>
+
+
